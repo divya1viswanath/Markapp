@@ -3,11 +3,16 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import Addstudent from './component/Addstudent';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <Addstudent/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/'exact element={<Addstudent/>}/>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
