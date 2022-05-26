@@ -2,13 +2,26 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label">Name</label>
-                    <input type="text" class="form-control">
-                </div>
-                <center> <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button class="btn btn-dark">Search</button>
-                </div> </center>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Admission no</th>
+                        <th scope="col">CGPA</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {viewstud.map((value,key)=>{
+                          return <tr>
+                          <td>{value.route}</td>
+                          <td>{value.busName}</td>
+                          <td>{value.busRegNo}</td>
+                          <td>{value.ownerName}</td>
+                          <td>{value.contactNo}</td>
+                        </tr>
+                        })}   
+                      </tbody>
+                  </table>
             </div>
         </div>
     </div>
